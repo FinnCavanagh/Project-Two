@@ -20,8 +20,7 @@
     <% @items.each do |item| %>
       <tr>
         <td><%= image_tag item.photo_url, width: 100 %></td>
-        <td><%= item.title %></td>
-        
+        <td><%= item.title %></td>   
         <td><%= item.user.full_name if item.user %></td>
         <td><%= item.description %></td>
         <td><%= item.category %></td>
