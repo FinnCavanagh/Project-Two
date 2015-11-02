@@ -11,12 +11,12 @@ class User < ActiveRecord::Base
 
 	def last_name
 	end
-
 	
 	def full_name
 		[first_name, last_name].join("")
 	end
 
-
+	def user_id
+	end
 
 end
