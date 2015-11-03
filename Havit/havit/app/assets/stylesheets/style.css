@@ -1,0 +1,37 @@
+
+// body {
+//     background: url('http://www.welcomia.com/uploads/preview/ink_splash_3110.jpg') 
+//     top center no-repeat;
+//     height: 3450px;
+//     margin-top: 30px;
+//   }
+
+
+//  body {
+//   	margin:0 auto;
+//   	text-align: center;
+//   	font-family: 'Roboto', sans-serif;
+//   	letter-spacing: 2px;
+//   	text-rendering: optimizeLegibility;
+//   	-webkit-font-smoothing: antialiased;
+//   	text-shadow: 1px 1px 1px rgba(0,0,0,0.004); 
+//   }
+
+//  .cl-effect-15 a {
+//  	color: rgba(0,0,0,0.2);
+//  	font-weight: 700;
+//  	text-shadow: none;
+//  }
+
+//  .cl-effect-15 a::before {
+//  	color: #fff;
+//  	content: attr(data-hover);
+//  	position: absolute;
+//  	transition: transform 0.3s, opacity 0.3s;
+//  }
+
+//  .cl-effect-15 a:hover::before,
+//  .cl-effect-15 a:focus::before {
+//  	transform: scale(0.9);
+//  	opacity: 0;
+//  }
