@@ -1,4 +1,4 @@
 class Request < ActiveRecord::Base
-	has_many :user
-	has_many :item 
+	has_and_belongs_to_many :users
+	belongs_to :item
 end

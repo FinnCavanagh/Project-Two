@@ -2,7 +2,7 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @user.name %>
+  <%= @user.full_name %>
 </p>
 
 <p>
@@ -24,3 +24,26 @@
   <strong>Rating:</strong>
   <%= @user.rating %>
 </p>
+
+<h2>Items</h2>
+<% @user.items.each do |item| %>
+  <p><%= item.title %></p>
+  <% if item.requests.length > 0 %>
+    <% item.requests.each do |request| %>
+      <p>Item requested by <%= item.user.full_name %><p>
+      <%= link_to 'Accept', request_path(request, { request: { accepted: true } }), method: :patch %>
+      <%= link_to 'Decline', request_path(request, { request: { accepted: false } }), method: :patch %>
+
+    <% end %>
+  <% end %>
+<% end %>
+
+<h2>Requests</h2>
+<% @user.requests.each do |request| %>
+  <%= request.item.title %>
+  <% if request.accepted %>
+    Request accepted by <%= request.item.user.full_name %>, please contact on <%= request.item.user.phone_number %>
+  <% end %>
+<% end %>
+<br>
+<%= link_to 'Edit', edit_user_registration_path %>

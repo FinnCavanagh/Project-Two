@@ -3,21 +3,13 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-	has_many :item 
-	has_many :review
-	has_many :request
 
-	def first_name
-	end
+  has_many :items
+  has_many :reviews
+  has_and_belongs_to_many :requests
 
-	def last_name
-	end
-	
-	def full_name
-		[first_name, last_name].join("")
-	end
-
-	def user_id
-	end
+  def full_name
+    [first_name, last_name].join(" ")
+  end
 
 end
