@@ -3,8 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-	has_many :items 
-	has_many :reviews
+	has_many :item 
+	has_many :review
+	has_many :request
 
 	def first_name
 	end
