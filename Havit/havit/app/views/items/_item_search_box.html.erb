@@ -1,10 +1,10 @@
 <% content_for :search do %>
-  <div class="large-8 small-9 columns">
-  <%= search_form_for @search do |f| %>
-    <%= f.text_field :title_cont, class: "radius-left expand", placeholder: "Item title" %>
+  <%= search_form_for(@search, class: "navbar-form navbar-left", role: "search") do |f| %>
+  <div class="form-group">
+    <%= f.text_field :title_cont, class: "form-control", placeholder: "Item title" %>
   </div>
     <div class="large-4 small-3 columns">
-      <%= f.submit "Search", class: "radius-right button" %>
+      <%= f.submit "Search", class: "btn btn-default" %>
     </div>
   <% end %>
 <% end %>
