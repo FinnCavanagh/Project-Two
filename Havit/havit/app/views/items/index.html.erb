@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 
 <%= render "item_search_box" %>
@@ -5,16 +6,9 @@
 <h1>Get</h1>
 
 
-<div id="grid" data-columns>
-  <div>Item #1</div>
-  <div>Item #2</div>
-  <div>Item #3</div>
-  …
-  <div>Item #20</div>
-
     <% @items.each do |item| %>
-      <div class="row">
-        <div class="col-sm-6 col-md-4">
+    <div id="grid" data-columns>
+      <div class="column size-1of3">
           <div class="thumbnail">
             <%= image_tag item.photo_url, width: 100 %>
             <div class="caption">
@@ -34,4 +28,10 @@
       <%= item.description %> -->
  
       <% end %>
+
+
+
+
+
+
 
