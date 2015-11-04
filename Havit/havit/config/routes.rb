@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :locations
+  resources :locations
+  resources :locations
   resources :requests
   get 'home/index'
 
@@ -7,6 +10,13 @@ Rails.application.routes.draw do
   resources :users, only: :show
 
   root "home#index"
+
+
+  # Rails.application.routes.draw do
+  resources :locations
+  resources :locations
+  #   root "locations#index"
+  #   # end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

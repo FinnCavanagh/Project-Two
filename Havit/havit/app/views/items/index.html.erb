@@ -22,6 +22,7 @@
         <td><%= item.title %></td>   
         <td><%= item.user.full_name if item.user %></td>
         <td><%= item.description %></td>
+        <td><%= image_tag item.photo_url.url %></td>
         <td><%= item.category %></td>
         <td><%= item.subcategory %></td>
         
