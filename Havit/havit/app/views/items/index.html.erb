@@ -6,28 +6,35 @@
 <h1>Get</h1>
 
 
-    <% @items.each do |item| %>
-    <div id="grid" data-columns>
-      <div class="column size-1of3">
-          <div class="thumbnail">
-            <%= image_tag item.photo_url, width: 100 %>
-            <div class="caption">
-              <%= item.title %> 
-              <p><%= link_to 'Info', item %></p>
-            </div>
-          </div>
+<div class="container-fluid">
+  <% @items.each_with_index do |item, i| %>
+
+    <% if i%3 == 0 %>
+      <div class="row">
+    <% end %>
+
+    <div class="col-sm-12 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag item.photo_url, width: 100 %>
+        <div class="caption">
+          <%= item.title %> 
+          <p><%= link_to 'Info', item %></p>
         </div>
       </div>
-  </div>  
-    
+    </div>
 
- <!-- 
-      <%= image_tag item.photo_url, width: 100 %>
-      <%= item.title %>   
-      <%= item.user.full_name if item.user %>
-      <%= item.description %> -->
+    <% if i%3 == 2 || i == @items.length-1 %>
+      </div>
+    <% end %>
+
+  <% end %>
+</div>
+    
+<%#= image_tag item.photo_url, width: 100 %>
+<%#= item.title %>   
+<%#= item.user.full_name if item.user %>
+<%#= item.description %>
  
-      <% end %>
 
 
 
