@@ -4,38 +4,34 @@
 
 <h1>Get</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Photo url</th>
-      <th>Category</th>
-      <th>Subcategory</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-   
 
-  <tbody>
+<div id="grid" data-columns>
+  <div>Item #1</div>
+  <div>Item #2</div>
+  <div>Item #3</div>
+  …
+  <div>Item #20</div>
+
     <% @items.each do |item| %>
-      <tr>
-        <td><%= image_tag item.photo_url, width: 100 %></td>
-        <td><%= item.title %></td>   
-        <td><%= item.user.full_name if item.user %></td>
-        <td><%= item.description %></td>
-        <td><%= image_tag item.photo_url.url %></td>
-        <td><%= item.category %></td>
-        <td><%= item.subcategory %></td>
-        
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <%= image_tag item.photo_url, width: 100 %>
+            <div class="caption">
+              <%= item.title %> 
+              <p><%= link_to 'Info', item %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>  
+    
 
-<br>
+ <!-- 
+      <%= image_tag item.photo_url, width: 100 %>
+      <%= item.title %>   
+      <%= item.user.full_name if item.user %>
+      <%= item.description %> -->
+ 
+      <% end %>
 
-<td><%= link_to 'Give', new_item_path if user_signed_in? %></td>

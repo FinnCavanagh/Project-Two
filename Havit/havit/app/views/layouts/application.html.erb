@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Havit</title>
-  <%= stylesheet_link_tag    'application'%>
-  <%= javascript_include_tag 'application'%>
-  <%= csrf_meta_tags %>
+	<title>Havit</title>
+	<%= stylesheet_link_tag    'application'%>
+	<%= javascript_include_tag 'application'%>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
 <div> 
-<h1 class="animated rubberBand">HAVIT</h1>
-
 
 	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <% if user_signed_in? %>
+		<p class="alert"><%= alert %></p>
+		<% if user_signed_in? %>
 
-    <nav>
-      	<ul class="signed_in_nav">
-    Hello <%= current_user.email %>,
-    <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-    	<%else%>
-    </ul>
-    </nav>
+		<nav>
+				<ul class="signed_in_nav">
+		Hello <%= current_user.email %>,
+		<%= link_to "Log out", destroy_user_session_path, method: :delete %>
+			<%else%>
+		</ul>
+		</nav>
 
 
-  <nav class="cl-effect-15">
-    <!-- 	<ul class="new_user_nav"> -->
+	<nav class="cl-effect-15">
+		<!-- 	<ul class="new_user_nav"> -->
 		<%= link_to "Log in", new_user_session_path%>
-    	<%= link_to "Sign Up", new_user_registration_path%> 
-   
- 	  	<%= link_to "Home", home_index_path%> 
-    	<%= link_to  "Get", items_path%> 
-    	<%= link_to  "Give", new_item_path %> 
-   	<%end%>   	 
-   	</ul>
-   </nav>
+			<%= link_to "Sign Up", new_user_registration_path%> 
+	 
+			<%= link_to "Home", home_index_path%> 
+			<%= link_to  "Get", items_path%> 
+			<%= link_to  "Give", new_item_path %> 
+		<%end%>   	 
+		</ul>
+	 </nav>
 
-   <%= yield(:search) %>
+	 <%= yield(:search) %>
 
 <%= yield %>
 
