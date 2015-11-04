@@ -5,8 +5,11 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    # @items = Item.all
+    @search = Item.search(params[:q])
+    @items = @search.result
   end
+
 
   # GET /items/1
   # GET /items/1.json
