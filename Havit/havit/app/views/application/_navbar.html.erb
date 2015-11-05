@@ -21,8 +21,7 @@
       <ul class="nav navbar-nav navbar-right">
        <li><%= link_to "Get", items_path%></li>
        <% if user_signed_in? %>
-       <li><%= link_to "Give", new_item_path%></li>
-      
+       <li><%= link_to "Give", new_item_path%></li>  
        <li><%= link_to "Your Profile", current_user %></li>
        <% end %> 
        <li class="dropdown">  

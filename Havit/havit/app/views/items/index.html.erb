@@ -8,25 +8,25 @@
 
 <div class="container-fluid">
   <% @items.each_with_index do |item, i| %>
+    <% unless item.given? %>
+      <% if i%3 == 0 %>
+        <div class="row">
+      <% end %>
 
-    <% if i%3 == 0 %>
-      <div class="row">
-    <% end %>
-
-    <div class="col-sm-12 col-md-4">
-      <div class="thumbnail">
-        <%= image_tag item.photo_url, width: 100 %>
-        <div class="caption">
-          <%= item.title %> 
-          <p><%= link_to 'Info', item %></p>
+      <div class="col-sm-12 col-md-4">
+        <div class="thumbnail">
+          <%= image_tag item.photo_url, width: 100 %>
+          <div class="caption">
+            <%= item.title %> 
+            <p><%= link_to 'Info', item %></p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <% if i%3 == 2 || i == @items.length-1 %>
-      </div>
+      <% if i%3 == 2 || i == @items.length-1 %>
+        </div>
+      <% end %>
     <% end %>
-
   <% end %>
 </div>
     

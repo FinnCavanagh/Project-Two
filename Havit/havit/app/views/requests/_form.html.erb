@@ -1,3 +1,4 @@
+
 <%= form_for(@request) do |f| %>
   <% if @request.errors.any? %>
     <div id="error_explanation">
@@ -13,22 +14,20 @@
 
 
   <div class="form-group">
-    <%= f.label :item_id %><br>
-    <%= f.number_field :item_id, class: "form-control" %> %>
+  <h1>New Request</h1>
+    <h2>You are making a request for <%= @item.title%></h2>
+    <%= f.hidden_field :item_id, value: @item.id %>
   </div>
-
   
   <div class="form-group">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id, class: "form-control" %> %>
+    The person who owns this item is <%= @item.user.full_name %>
   </div>
  
  <div class="form-group">
-    <%= f.label :accepted %><br>
-    <%= f.text_field :accepted, class: "form-control" %> %>
+    Are you sure you want to request this item ?
   </div>
  
  <div class="form-group">
-    <%= f.submit %>
+    <%= f.submit "FOSHO" %>
   </div>
 <% end %>

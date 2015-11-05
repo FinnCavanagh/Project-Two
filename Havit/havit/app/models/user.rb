@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :items
   has_many :reviews
-  has_and_belongs_to_many :requests
+  has_many :requests
 
   def full_name
     [first_name, last_name].join(" ")

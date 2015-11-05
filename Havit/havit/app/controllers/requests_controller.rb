@@ -14,6 +14,7 @@ class RequestsController < ApplicationController
 
   # GET /requests/new
   def new
+    @item = Item.find(params[:item_id])
     @request = Request.new
   end
 
@@ -24,7 +25,7 @@ class RequestsController < ApplicationController
   # POST /requests
   # POST /requests.json
   def create
-    @request = Request.new(request_params)
+    @request = current_user.requests.new(request_params)
 
     respond_to do |format|
       if @request.save
