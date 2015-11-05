@@ -1,42 +1,35 @@
 
-<p id="notice"><%= notice %></p>
 
 <%= render "item_search_box" %>
 
 <h1>Get</h1>
+<% @items.each_with_index do |item, i| %>
+  <% unless item.given? %>
+    <% if i%3 == 0 %>
+    <% end %>
 
-
-<div class="container-fluid">
-  <% @items.each_with_index do |item, i| %>
-    <% unless item.given? %>
-      <% if i%3 == 0 %>
-        <div class="row">
-      <% end %>
-
-      <div class="col-sm-12 col-md-4">
-        <div class="wrapper">
-        <div class="thumbnail">
-          <%= image_tag item.photo_url, width: 100 %>
-          <div class="caption">
-            <%= item.title %> 
-            <p><%= link_to 'Info', item %></p>
-          </div>
+    <div class="col-sm-12 col-md-4 col-lg-3">
+      <div class="thumbnail">
+        <%= image_tag item.photo_url, width: 250 %>
+        <div class="caption">
+          <%= item.title %> 
+          <p><%= link_to 'Info', item %></p>
         </div>
       </div>
     </div>
 
-      <% if i%3 == 2 || i == @items.length-1 %>
-        </div>
-      <% end %>
+    <% if i%3 == 2 || i == @items.length-1 %>
+      </div>
     <% end %>
   <% end %>
-</div>
+<% end %>
     
+
 <%#= image_tag item.photo_url, width: 100 %>
 <%#= item.title %>   
 <%#= item.user.full_name if item.user %>
 <%#= item.description %>
- 
+
 
 
 
