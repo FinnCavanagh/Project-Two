@@ -1,28 +1,43 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to HAVIT:
 
-Things you may want to cover:
+* 
+Using rails (= 4.2.4) on a ruby platform.
+The site is an app for giving and getting stuff for free in your local area. 
 
-* Ruby version
+You need to become a member in order to give or get but you can look at the listings without signing up. 
 
-* System dependencies
+*
+I employed the following gems:
+gem 'bootstrap-sass', '~> 3.3.5'
+--> for stlying
 
-* Configuration
+gem 'ransack'
+--> for search
 
-* Database creation
+gem "mini_magick"
+--> for managing image uploading
 
-* Database initialization
+gem 'carrierwave'
+--> for uploading images
 
-* How to run the test suite
+gem 'devise'
+--> for authentication
 
-* Services (job queues, cache servers, search engines, etc.)
+* 
+The landing page uses a javascipt & canvas animation from codrops (/tympanus.net). It's an animation loop using requestAnimationFrame and features triangles modified to create different effects. Find it here: http://tympanus.net/codrops/2014/09/23/animated-background-headers/
 
-* Deployment instructions
+* 
+Using PostsgreSQL the database uses 4 models to enable users to trade their stuff.
 
-* ...
+* 
+I relied on Bootstrap for styling and customised the site using images and google fonts.
+ 
+*
+I implemented a reviews and rating system which has yet to be developed fully. The idea is that members with higher ratings will be given preference for getting items. 
+Buttons and design features will also be upgraded after the initial launch. 
+Location gems will be used to help members locate items. 
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+*
+The site is deployed on Heroku. 
