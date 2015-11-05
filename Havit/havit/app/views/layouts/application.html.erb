@@ -7,26 +7,15 @@
 </head>
 <body>
 
-
-
-	<div> 
+<!-- 	<div> 
 		<p class="notice"><%= notice %></p>
 		<p class="alert"><%= alert %></p>
-		<% if user_signed_in? %>
-
-		<nav>
-			<ul class="signed_in_nav">
-				Hello <%= current_user.email %>,
-				<%= link_to "Log out", destroy_user_session_path, method: :delete %>
-				<%else%>
-			</ul>
-		</nav>
+	</div> -->
 
 		<%= render "navbar" %>
 		<%= yield %>
 
 
-		</body>
-		</html>
+	</body>
+	</html>
 
-		<%end%>
