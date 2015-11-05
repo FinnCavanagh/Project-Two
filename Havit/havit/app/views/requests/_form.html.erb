@@ -12,22 +12,22 @@
     </div>
   <% end %>
 
-
-  <div class="form-group">
+  <div class="new-request">
   <h1>New Request</h1>
-    <h2>You are making a request for <%= @item.title%></h2>
+    <h2>You are requesting <%= @item.title%></h2>
     <%= f.hidden_field :item_id, value: @item.id %>
   </div>
   
   <div class="form-group">
-    The person who owns this item is <%= @item.user.full_name %>
+    You can Havit this item from <%= @item.user.full_name %>
   </div>
  
  <div class="form-group">
-    Are you sure you want to request this item ?
+    Are you sure-sure you want to request this item ?
   </div>
  
  <div class="form-group">
-    <%= f.submit "FOSHO" %>
+    <%= f.submit "I'm sure!" %>
+  </div>
   </div>
 <% end %>

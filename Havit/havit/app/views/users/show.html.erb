@@ -1,7 +1,10 @@
 
+<div class="profile">
+<%= image_tag "triabgle.jpg" %>
+</div>
 
+<div class="profileinfo">
 <div class="form-group">
-
 <h3>Your Profile</h3>
   <strong>Name:</strong>
   <%= @user.full_name %>
@@ -55,4 +58,5 @@
 <% end %>
 <br>
 <%= link_to 'Edit Your Details', edit_user_registration_path %>
+</div>
 </div>
