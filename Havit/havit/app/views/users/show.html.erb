@@ -1,31 +1,34 @@
-<p id="notice"><%= notice %></p>
 
-<p>
+
+<div class="form-group">
+
+<h3>Your Profile</h3>
   <strong>Name:</strong>
   <%= @user.full_name %>
-</p>
+</div>
 
-<p>
+<div class="form-group">
   <strong>Email:</strong>
   <%= @user.email %>
-</p>
+</div>
 
-<p>
+<div class="form-group">
   <strong>Postcode:</strong>
   <%= @user.postcode %>
-</p>
+</div>
 
-<p>
+<div class="form-group">
   <strong>City:</strong>
   <%= @user.city %>
-</p>
+</div>
 
-<p>
+<div class="form-group">
   <strong>Rating:</strong>
   <%= @user.rating %>
-</p>
+</div>
 
-<h2>Items</h2>
+<div class="form-group">
+<h3>Your Posted Items</h3>
 <% @user.items.each do |item| %>
   <p><%= item.title %></p>
   <% if item.requests.length > 0 %>
@@ -33,12 +36,11 @@
       <p>Item requested by <%= item.user.full_name %><p>
       <%= link_to 'Accept', request_path(request, { request: { accepted: true } }), method: :patch %>
       <%= link_to 'Decline', request_path(request, { request: { accepted: false } }), method: :patch %>
-
     <% end %>
   <% end %>
 <% end %>
 
-<h2>Requests</h2>
+<h3>Requests for Your Items</h3>
 <% @user.requests.each do |request| %>
   <%= request.item.title %>
   <% if request.accepted %>
@@ -47,3 +49,4 @@
 <% end %>
 <br>
 <%= link_to 'Edit', edit_user_registration_path %>
+</div>

@@ -11,27 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
+
+  <div class="form-group">
+  <h1>Give A New Item</h1>
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: "form-control"  %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :photo_url %><br>
-    <%= f.file_field :photo_url %>
+    <%= f.file_field :photo_url, class: "form-control"  %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :category %><br>
-    <%= f.text_area :category %>
+    <%= f.text_area :category, class: "form-control"  %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :subcategory %><br>
-    <%= f.text_field :subcategory %>
+    <%= f.text_field :subcategory, class: "form-control"  %>
   </div>
-  <div class="actions">
+  <div class="form-group">
     <%= f.submit %>
   </div>
 <% end %>

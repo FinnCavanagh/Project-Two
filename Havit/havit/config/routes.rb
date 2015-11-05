@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   resources :locations
-  resources :locations
-  resources :locations
   resources :requests
   get 'home/index'
 
@@ -11,9 +9,10 @@ Rails.application.routes.draw do
 
   root "home#index"
 
+  get 'users/:id' => 'users#show'
 
   # Rails.application.routes.draw do
-  resources :locations
+
   resources :locations
   #   root "locations#index"
   #   # end

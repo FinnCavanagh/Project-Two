@@ -11,19 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+
+  <div class="form-group">
     <%= f.label :item_id %><br>
-    <%= f.number_field :item_id %>
+    <%= f.number_field :item_id, class: "form-control" %> %>
   </div>
-  <div class="field">
+
+  
+  <div class="form-group">
     <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.number_field :user_id, class: "form-control" %> %>
   </div>
-  <div class="field">
+ 
+ <div class="form-group">
     <%= f.label :accepted %><br>
-    <%= f.text_field :accepted %>
+    <%= f.text_field :accepted, class: "form-control" %> %>
   </div>
-  <div class="actions">
+ 
+ <div class="form-group">
     <%= f.submit %>
   </div>
 <% end %>

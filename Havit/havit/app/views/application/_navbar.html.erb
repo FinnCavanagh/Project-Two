@@ -19,26 +19,30 @@
       </ul>
       <%= yield(:search) %>
       <ul class="nav navbar-nav navbar-right">
-        <li> <%= link_to "Get", items_path%></li>
-        <li class="dropdown">        
-        <% if user_signed_in? %>        
-        <li><%= link_to "Give", new_item_path%></li>
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, <%= current_user.first_name %><span class="caret"></span></a>
-        <% else %>
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get In<span class="caret"></span></a>
-        <% end %>
-          <ul class="dropdown-menu">
-            <li><%= link_to "About", new_user_registration_path, class: "dropdown" %></li>
-            <li role="separator" class="divider"></li>
-            <% if user_signed_in? %>
-            <li><%= link_to "Get Out", destroy_user_session_path, method: :delete,  class: "dropdown" %></li>
-            <% else %>
-            <li><%= link_to "Sign In", new_user_session_path, class: "dropdown" %></li>
-            <li><%= link_to "Join", new_user_registration_path, class: "dropdown" %></li>
-            <% end %>  
-          </ul>
-        </li>
-      </ul>
+       <li><%= link_to "Get", items_path%></li>
+       <% if user_signed_in? %>
+       <li><%= link_to "Give", new_item_path%></li>
+      
+       <li><%= link_to "Your Profile", current_user %></li>
+       <% end %> 
+       <li class="dropdown">  
+         <% if user_signed_in? %>        
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, <%= current_user.first_name %><span class="caret"></span></a>
+         <% else %>
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get In<span class="caret"></span></a>
+         <% end %>
+         <ul class="dropdown-menu">
+           <li><%= link_to "About", new_user_registration_path, class: "dropdown" %></li>
+           <li role="separator" class="divider"></li>
+           <% if user_signed_in? %>
+           <li><%= link_to "Get Out", destroy_user_session_path, method: :delete,  class: "dropdown" %></li>
+           <% else %>
+           <li><%= link_to "Sign In", new_user_session_path, class: "dropdown" %></li>
+           <li><%= link_to "Join", new_user_registration_path, class: "dropdown" %></li>
+           <% end %>  
+         </ul>
+       </li>
+     </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
