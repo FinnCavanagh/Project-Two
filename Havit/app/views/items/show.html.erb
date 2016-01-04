@@ -1,0 +1,39 @@
+
+<div class="form-group">
+  <strong>Title:</strong> <br>
+  <%= @item.title %>
+</div>
+
+<div class="form-group">
+  <strong>Description:</strong> <br>
+  <%= @item.description %>
+  </div>
+
+<div class="form-group">
+  <strong>Image:</strong> <br>
+ <%= image_tag @item.photo_url.url %>
+ </div>
+
+<div class="form-group">
+  <strong>Category:</strong> <br>
+  <%= @item.category %>
+  </div>
+
+<div class="form-group">
+  <strong>Subcategory:</strong> <br>
+  <%= @item.subcategory %>
+  </div>
+
+<div class="form-group">
+  <strong>Havit From:</strong> <br>
+  <%= @item.user.full_name %>
+</div>
+
+  <div class="form-group">
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %> |
+<%= link_to 'Request', new_request_path(item_id: @item.id)%> |
+<%= link_to 'New Item', new_item_path %> |
+<%= link_to 'Delete', @item, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+</div>
