@@ -6,7 +6,7 @@ This site is all about local community and reducing both spending and waste. Aft
 
 A user must sign up (Join) in order to use the site after which they can just log in (Get In) on future visits.
 
-![image](http://finncavanagh.github.io/app/assets/images/havit-database-diagram.png)
+![image](http://finncavanagh.github.com/app/assets/images/havit-database-diagram.png)
 
 * 
 Using rails (= 4.2.4) on a ruby platform.
