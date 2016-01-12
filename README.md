@@ -44,6 +44,8 @@ gem 'devise'
 Database:
 PostsgreSQL the database uses 4 models to enable users to trade their stuff.
 
+Image Uploading:
+Amazon Web Services hosts and manages the file uploading
 
 ## Styling
 
