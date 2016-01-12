@@ -1,6 +1,6 @@
 ### README
 
-Welcome to HAVIT. 
+Welcome to **HAVIT**. 
 
 This site is all about local community and reducing both spending and waste. 
 
@@ -22,10 +22,10 @@ In this original database diagram I have 3 models: users, items and reviews. I l
 
 My wireframes show my intention to have a simple, clean design. 
 
-### Technology Used
-Using rails (= 4.2.4) on a ruby platform.
+### Technology
+This project was built in Ruby on Rails v.4.2.4
 
-I used the following gems:
+I used the following **Gems**:
 gem 'bootstrap-sass', '~> 3.3.5'
 --> for styling
 
@@ -35,17 +35,23 @@ gem 'ransack'
 gem "mini_magick"
 --> for managing image uploading
 
+gem 'RMagick'
+--> to process images
+
 gem 'carrierwave'
---> for uploading images
+--> for file uploads
 
 gem 'devise'
---> for authentication
+--> for logins & authentication
 
-Database:
+gem 'fog' 
+--> to interface with files stored remotely
+
+**Database**:
 PostsgreSQL the database uses 4 models to enable users to trade their stuff.
 
-Image Uploading:
-Amazon Web Services hosts and manages the file uploading
+**Image Uploading**:
+Amazon Web Services hosts and manages uploaded files
 
 ## Styling
 
