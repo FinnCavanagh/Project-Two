@@ -26,26 +26,19 @@ My wireframes show my intention to have a simple, clean design.
 This project was built in Ruby on Rails v.4.2.4
 
 I used the following **Gems**:
-gem 'bootstrap-sass', '~> 3.3.5'
---> for styling
+gem 'bootstrap-sass --> for styling
 
-gem 'ransack'
---> for search
+gem 'ransack' --> for search
 
-gem "mini_magick"
---> for managing image uploading
+gem 'mini_magick' --> for managing image uploading
 
-gem 'RMagick'
---> to process images
+gem 'RMagick' --> to process images
 
-gem 'carrierwave'
---> for file uploads
+gem 'carrierwave' --> for file uploads
 
-gem 'devise'
---> for logins & authentication
+gem 'devise' --> for logins & authentication
 
-gem 'fog' 
---> to interface with files stored remotely
+gem 'fog' --> to interface with files stored remotely
 
 **Database**:
 PostsgreSQL the database uses 4 models to enable users to trade their stuff.
