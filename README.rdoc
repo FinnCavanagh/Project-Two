@@ -8,8 +8,6 @@ A user must sign up (Join) in order to use the site after which they can just lo
 
 ![image](http://github.com/FinnCavanagh/Project-Two/images/havit-database-diagram.png)
 
-
-
 * 
 Using rails (= 4.2.4) on a ruby platform.
 The site is an app for giving and getting stuff for free in your local area. 
