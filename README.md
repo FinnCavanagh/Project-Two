@@ -41,24 +41,26 @@ gem 'carrierwave'
 gem 'devise'
 --> for authentication
 
-## The Landing Page
+Database:
+PostsgreSQL the database uses 4 models to enable users to trade their stuff.
+
+
+## Styling
 
 ![image](https://github.com/FinnCavanagh/Project-Two/blob/master/images/havit-splash.png)
 
 The landing page uses a JavaScipt & Canvas animation from CoDrops (/tympanus.net). It's an animation loop using requestAnimationFrame and features triangles modified to create different effects. [Find it here:](http://tympanus.net/codrops/2014/09/23/animated-background-headers/)
 
-* 
-Using PostsgreSQL the database uses 4 models to enable users to trade their stuff.
+I went with a Bootstrap Framework for the rest of the site styling and customised the site using images and google fonts.
 
-* 
-I went to Bootstrap for styling and customised the site using images and google fonts.
+It's fully responsive across devices.
  
-*
+### Future Improvements
 I implemented a reviews and rating system which has yet to be developed fully. The idea is that members with higher ratings will be given preference for getting items. 
 Buttons and design features will also be upgraded after the initial launch. 
 Location gems will be used to help members locate items. 
 
-*
-[The site is deployed on Heroku at:](http://quiet-dawn-3235.herokuapp.com/home/index)
+### Find It Online: 
+[The site is deployed here on Heroku](http://quiet-dawn-3235.herokuapp.com/home/index)
 
 
