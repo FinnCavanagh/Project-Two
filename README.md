@@ -27,9 +27,9 @@ This project was built in Ruby on Rails v.4.2.4
 
 I used the following **Gems**:
 
-**bootstrap-sass** --> for styling
-**ransack** --> for search
-**mini_magick** --> for managing image uploading
+**bootstrap-sass** --> for styling⋅⋅
+**ransack** --> for search⋅⋅
+**mini_magick** --> for managing image uploading⋅⋅
 **RMagick** --> to process images
 **carrierwave** --> for file uploads
 **devise** --> for logins & authentication
